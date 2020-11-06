@@ -13,6 +13,80 @@ const render = require("./Develop/lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+inquirer
+const promptManager = () => {
+    return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'managerName',
+        message: 'what is your managers name?',
+    },
+    {
+        type: 'input',
+        name: 'managerID',
+        message: 'what is your managers id?',
+    },
+    {
+        type: 'input',
+        name:'managerEmail',
+        message: 'what is your managers email?',
+    },
+    {
+        type: 'input',
+        name: 'officeNumber',
+        message: 'what is your managers office number?',
+    },
+  ])
+}
+
+const promptEngineer = () => {
+    return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'engineername',
+        message: 'what is your Engineers name?',
+    },
+    {
+        type: 'input',
+        name: 'engineerID',
+        message: 'what is your engineers ID?',
+    },
+    {
+        type: 'input',
+        name: 'engineerEmail',
+        message: 'what is your engineers email?',
+    },
+    {
+        type: 'input',
+        name: 'engineerGithub',
+        message: 'what is your engineers githib?'
+    },
+  ])
+}
+const promptIntern = () => {
+ return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'intername',
+        message: 'what is your Interns name?',
+    },
+    {
+        type: 'input',
+        name: 'InternID',
+        message: 'what is your interns ID?',
+    },
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'what is your interns email?',
+    },
+    {
+        type: 'input',
+        name: 'internSchool',
+        message: 'what is your interns school?'
+    },
+  ])
+}
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
