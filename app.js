@@ -38,14 +38,16 @@ const promptManager = () => {
     ])
 }
 const promptRole = () => {
-    return inquirer.prompt([ 
+    return inquirer
+    .prompt([ 
         {
             type: 'list',
             name: 'role',
             message: 'Which type of team member would you like to add?',
-            choices: ["Engineer", "Intern", "I don't want to add any more team members"]
-        }
-    ])
+            choices: ["Engineer", "Intern", "I don't want to add any more team members"
+          ],
+        },
+])
     .then(answers => {
         if (answers.role == "Engineer"){
             promptEngineer();
@@ -60,9 +62,10 @@ const promptRole = () => {
                 } else {
                     console.log('YOUR WEBPAGE HAS BEEN GENERATED')
                 }
-
-        })
-}
+              });
+            }
+        });
+};
 
 const promptEngineer = () => {
     return inquirer.prompt([
