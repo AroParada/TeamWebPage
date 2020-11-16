@@ -68,34 +68,35 @@ const promptRole = () => {
 };
 
 const promptEngineer = () => {
-    return inquirer.prompt([
-    {
+       return inquirer.prompt([
+       {
         type: 'input',
         name: 'engineername',
         message: 'what is your Engineers name?',
-    },
-    {
+       },
+       {
         type: 'input',
         name: 'engineerID',
         message: 'what is your engineers ID?',
-    },
-    {
+       },
+       {
         type: 'input',
         name: 'engineerEmail',
         message: 'what is your engineers email?',
-    },
-    {
+       },
+       {
         type: 'input',
         name: 'engineerGithub',
         message: 'what is your engineers githib?'
-    },
-])
-.then(answers => {
+       },
+    ])
+
+    .then(answers => {
     var Engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
     employees.push(Engineer);
     promptRole();
-    })  
-} 
+    })
+};
 
 const promptIntern = () => {
     return inquirer.prompt([
