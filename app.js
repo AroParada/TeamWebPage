@@ -93,7 +93,7 @@ const promptEngineer = () => {
 
     .then(answers => {
     var engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
-    employees.push(Engineer);
+    employees.push(engineer);
     promptRole();
     })
 };
@@ -124,7 +124,7 @@ const promptIntern = () => {
 
 .then(answers => {
     var intern = new Intern(answers.name, answers.id, answers.email, answers.school)
-    employees.push(Intern);
+    employees.push(intern);
     promptRole();
     })
 }
