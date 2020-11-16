@@ -17,22 +17,22 @@ const promptManager = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'Role',
+            name: 'name',
             message: 'what is your managers name?',
         },
         {
             type: 'input',
-            name: 'ID',
+            name: 'iD',
             message: 'what is your managers id?',
         },
         {
             type: 'input',
-            name:'managerEmail', 
+            name:'email', 
             message: 'what is your managers email?',
         },
         {
             type: 'input',
-            name: 'officeNumber',
+            name: 'phone',
             message: 'what is your managers office number?',
         },
     ])
@@ -71,28 +71,28 @@ const promptEngineer = () => {
        return inquirer.prompt([
        {
         type: 'input',
-        name: 'engineername',
+        name: 'name',
         message: 'what is your Engineers name?',
        },
        {
         type: 'input',
-        name: 'engineerID',
+        name: 'id',
         message: 'what is your engineers ID?',
        },
        {
         type: 'input',
-        name: 'engineerEmail',
+        name: 'email',
         message: 'what is your engineers email?',
        },
        {
         type: 'input',
-        name: 'engineerGithub',
+        name: 'github',
         message: 'what is your engineers githib?'
        },
     ])
 
     .then(answers => {
-    var engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
+    var engineer = new Engineer(answers.name, answers.role, answers.id, answers.github)
     employees.push(engineer);
     promptRole();
     })
@@ -102,22 +102,22 @@ const promptIntern = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'intername',
+            name: 'name',
             message: 'what is your Interns name?',
         },
         {
             type: 'input',
-            name: 'InternID',
+            name: 'id',
             message: 'what is your interns ID?',
         },
         {
             type: 'input',
-            name: 'internEmail',
+            name: 'email',
             message: 'what is your interns email?',
         },
         {
             type: 'input',
-            name: 'internSchool',
+            name: 'school',
             message: 'what is your interns school?'
         }
     ])
@@ -130,7 +130,7 @@ const promptIntern = () => {
 }
 promptManager()
 .then(answers => {
-            var manager = new Manager(answers.name, answers.id, answers.email, answers.phone)
+            var manager = new Manager(answers.name,answers.role, answers.email, answers.phone,)
             employees.push(manager);
             promptRole();
   
