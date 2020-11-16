@@ -11,4 +11,5 @@ so that I have quick access to emails and GitHub profiles
 * Below is an example of what the application may look like.
 
 <img src="assets\Screenshot (86).png" alt="screenshot">
+
 <img src="assets\Screenshot (87).png" alt="screenshot">
