@@ -92,7 +92,7 @@ const promptEngineer = () => {
     ])
 
     .then(answers => {
-    var Engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
+    var engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
     employees.push(Engineer);
     promptRole();
     })
@@ -123,7 +123,7 @@ const promptIntern = () => {
     ])
 
 .then(answers => {
-    var Intern = new Intern(answers.name, answers.id, answers.email, answers.school)
+    var intern = new Intern(answers.name, answers.id, answers.email, answers.school)
     employees.push(Intern);
     promptRole();
     })
